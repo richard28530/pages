@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="通过doxygen生成文档。  doxygen -g 生成Doxyfile 添加如下  12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 100DOT_TRANSPARENT      = YESEXTRACT_A">
+<meta name="description" content="通过doxygen生成文档，文档中包含类的UML图。  执行doxygen -g，生成Doxyfile  1doxygen -g  修改Doxyfile，添加如下 12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  =">
 <meta name="keywords" content="Doxygen,UML,C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用Doxygen生成UML">
 <meta property="og:url" content="http://www.ironjosh.com/2018/01/02/2018/doxygen_generate_doc/index.html">
 <meta property="og:site_name" content="陈虎的博客">
-<meta property="og:description" content="通过doxygen生成文档。  doxygen -g 生成Doxyfile 添加如下  12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 100DOT_TRANSPARENT      = YESEXTRACT_A">
+<meta property="og:description" content="通过doxygen生成文档，文档中包含类的UML图。  执行doxygen -g，生成Doxyfile  1doxygen -g  修改Doxyfile，添加如下 12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  =">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-03T11:55:29.000Z">
+<meta property="og:updated_time" content="2018-01-03T12:01:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Doxygen生成UML">
-<meta name="twitter:description" content="通过doxygen生成文档。  doxygen -g 生成Doxyfile 添加如下  12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 100DOT_TRANSPARENT      = YESEXTRACT_A">
+<meta name="twitter:description" content="通过doxygen生成文档，文档中包含类的UML图。  执行doxygen -g，生成Doxyfile  1doxygen -g  修改Doxyfile，添加如下 12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  =">
 
 
 
@@ -352,13 +352,17 @@
       
 
       
-        <p>通过doxygen生成文档。</p>
+        <p>通过doxygen生成文档，文档中包含类的UML图。</p>
 <ul>
-<li>doxygen -g 生成Doxyfile 添加如下</li>
-</ul>
+<li><p>执行doxygen -g，生成Doxyfile </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doxygen -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改Doxyfile，添加如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">CLASS_DIAGRAMS       = YES</span><br><span class="line">CLASS_GRAPH          = YES</span><br><span class="line">COLLABORATION_GRAPH  = YES</span><br><span class="line">DOT_GRAPH_MAX_NODES  = 100</span><br><span class="line">DOT_TRANSPARENT      = YES</span><br><span class="line">EXTRACT_ALL          = YES</span><br><span class="line">HAVE_DOT             = YES</span><br><span class="line">HIDE_UNDOC_RELATIONS = NO</span><br><span class="line">MAX_DOT_GRAPH_DEPTH  = 0</span><br><span class="line">RECURSIVE              = YES</span><br><span class="line">TEMPLATE_RELATIONS   = YES</span><br><span class="line">UML_LIMIT_NUM_FIELDS = 50</span><br><span class="line">UML_LOOK             = YES</span><br></pre></td></tr></table></figure>
-<ul>
-<li>doxygen生成</li>
+</li>
+<li><p>执行doxygen</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">doxygen</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
       

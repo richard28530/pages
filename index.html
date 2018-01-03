@@ -355,11 +355,13 @@
       
         
           
-          通过doxygen生成文档。
+          通过doxygen生成文档，文档中包含类的UML图。
 
-doxygen -g 生成Doxyfile 添加如下
+执行doxygen -g，生成Doxyfile 
+1doxygen -g
 
-12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_M
+修改Doxyfile，添加如下
+12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YE
           ...
           <!--noindex-->
           <div class="post-button text-center">
