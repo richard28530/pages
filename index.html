@@ -229,6 +229,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -239,16 +249,6 @@
 
 
 
-
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?a608a9cf61a11d0fb8e38559909dfff4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
  </div>
     </header>
 
@@ -371,7 +371,7 @@ var _hmt = _hmt || [];
 1doxygen -g
 
 修改Doxyfile，添加如下
-12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 100DOT_TRANSPARENT      = YESEXTRACT_ALL          = YESHAVE_DOT             = YESHIDE_UNDOC_RELATION
+12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -529,7 +529,7 @@ var _hmt = _hmt || [];
 
 html转pdf
 
-12wkhtmltopdf --dpi 300 --disable-smart-shrinking --print-media-type SONiC.html SONiC.pdfwkhtmltopdf --print-media-type --margin-top 10mm --margin-bottom 10m
+12wkhtmltopdf --dpi 300 --disable-smart-shrinking --print
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -679,7 +679,7 @@ html转pdf
           
           Essentials (3-step):(If much of your system is of a higher version, you’ll want to be careful downgrading. See especially format changes (data and personal config files)
 
-Remove all references to sid or unstable in your /etc/apt/sources.list by deleting, replacing, or commenting out. Ensure sources.
+Remove all references to sid 
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -829,7 +829,7 @@ Remove all references to sid or unstable in your /etc/apt/sources.list by deleti
           
           
 Dockfile如下
-1234567891011121314151617181920FROM debian:jessieRUN apt-get update &amp;&amp; apt-get -y install build-essential \    apt-transport-https \    ca-certificates \    curl \    gnupg2 \    lsb-release \    software-properties-commonRUN curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux
+1234567891011121314151617181920FROM debian:jessieRUN apt-get update &amp;&amp; apt-get -y install build-essential \    apt-transport-https \    ca-certificates \    curl \    gnupg2 \    l
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -979,8 +979,7 @@ Dockfile如下
           
           关键对话练习表
 对话原则对话技巧关键问题从“心”开始关注你的真正目的拒绝做出“傻瓜式选择”我让你感觉自己的目的是什么我的真正目的是什么 关于自己的
- 关于他人的 关于我们之间关系的怎样做才能实现这些真正目的我不希望怎样怎样才能真正的实现希望的目的，避免不希望实现的目的注意观察关注交谈何时会变成关键对话关注安全问题关注你的压力应对方式我正在陷入沉默或者暴力状态吗对方正在陷入沉默或暴力状态吗保证安全在必要的时候道歉利用对比法消除误解利用四步法创建共同目的安全感为什么会出现危机我的真正目的是什么
- 我是否建立了共同目标* 我是否保持了彼此尊重怎样做才能重建安全感控制想法行为模式回顾区分事实和想法留意
+ 关于他人的 关于我们之间关系的怎样做才能实现这些真正目的我不希望怎样怎样才能真正的实现希望的目的，避免不希望实现的目的注意观察关注交谈何时会变成关键对话关注安全问题关注你的压力应对方式我正在陷入沉默或者暴力状态吗对方正在陷入沉默或暴力状态吗保证安全在
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1132,9 +1131,7 @@ Dockfile如下
 Normal TCP Flag combination
 
 SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection.
-Except for the initial SYN packet, every packet in a connection must have the ACK bit set.
-FIN ACK and ACK are used during the graceful teardown of an existing connection.
-
+Except for the initial SYN packet, every packet in a connection must hav
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1284,7 +1281,7 @@ FIN ACK and ACK are used during the graceful teardown of an existing connection.
           
           
 exported packet payload format
-1234567891011121314151617&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;&lt;dropPacket&gt;    &lt;model version="1.0" author="ConnetOS"/&gt;    &lt;metaData&gt;        &lt;ingressPhysicalPort&gt;te-1/1/1&lt;/ingressPhysicalPort&gt;        &lt;egressPhysicalPort&gt;N
+1234567891011121314151617&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;&lt;dropPacket&gt;    &lt;model version="1.0" author="ConnetOS"/&gt;    &lt;metaData&gt;      
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1588,7 +1585,7 @@ exported packet payload format
       
         
           
-          12345678910111213141516171819202122232425# $language = "VBScript"# $interface = "1.0"Sub Main  Dim result  Dim SendKey  SendKey = 03 'send ctrl+c key  result = 0  'crt.screen.clear  Do    crt.Screen.Send "san" &amp; chr(13)	'crt.Screen.Send "mac show" &amp; chr(13) 	'crt.sleep 500	crt.Screen.Send "e
+          12345678910111213141516171819202122232425# $language = "VBScript"# $interface = "1.0"Sub Main  Dim result  Dim SendKey  SendKey = 03 'send ctrl+c key  result = 0  'crt.screen.clear  Do    crt.Screen.S
           ...
           <!--noindex-->
           <div class="post-button text-center">
