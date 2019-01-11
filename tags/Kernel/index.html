@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="TCP FLAGS," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,16 @@
 
 
 
-<meta name="description" content="Normal TCP Flag combination  SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection. Except for the initial SYN packet, every packet in a connection must hav">
-<meta name="keywords" content="TCP FLAGS">
-<meta property="og:type" content="article">
-<meta property="og:title" content="TCP FLAGS">
-<meta property="og:url" content="http://www.ironjosh.top/2017/07/28/2017/tcp_flags/index.html">
+<meta name="description" content="陈虎的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="陈虎的博客">
+<meta property="og:url" content="http://www.ironjosh.top/tags/Kernel/index.html">
 <meta property="og:site_name" content="陈虎的博客">
-<meta property="og:description" content="Normal TCP Flag combination  SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection. Except for the initial SYN packet, every packet in a connection must hav">
+<meta property="og:description" content="陈虎的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-03T12:10:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="TCP FLAGS">
-<meta name="twitter:description" content="Normal TCP Flag combination  SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection. Except for the initial SYN packet, every packet in a connection must hav">
+<meta name="twitter:title" content="陈虎的博客">
+<meta name="twitter:description" content="陈虎的博客">
 
 
 
@@ -120,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://www.ironjosh.top/2017/07/28/2017/tcp_flags/"/>
+  <link rel="canonical" href="http://www.ironjosh.top/tags/Kernel/"/>
 
 
 
 
 
-  <title>TCP FLAGS | 陈虎的博客</title>
+  <title>标签: Kernel | 陈虎的博客</title>
   
 
 
@@ -145,7 +143,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,193 +247,54 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
+  
+  
+  
+  <div class="post-block tag">
 
-  
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h2>Kernel<small>标签</small>
+        </h2>
+      </div>
 
-  
-  
-  
+      
+        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2017/07/28/2017/tcp_flags/">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ironjosh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈虎的博客">
-    </span>
-
-    
-      <header class="post-header">
-
+      <h3 class="post-title">
         
+            <a class="post-title-link" href="/2018/12/24/2018/kernel-hung-task-check/" itemprop="url">
+              
+                <span itemprop="name">Linux kernel hung task检测</span>
+              
+            </a>
         
-          <h2 class="post-title" itemprop="name headline">TCP FLAGS</h2>
-        
+      </h3>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-28T18:33:01+08:00">
-                2017-07-28
-              </time>
-            
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-12-24T14:06:01+08:00"
+              content="2018-12-24" >
+          12-24
+        </time>
+      </div>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/网络/" itemprop="url" rel="index">
-                    <span itemprop="name">网络</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <ul>
-<li><p>Normal TCP Flag combination</p>
-<ul>
-<li>SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection.</li>
-<li>Except for the initial SYN packet, every packet in a connection must have the ACK bit set.</li>
-<li>FIN ACK and ACK are used during the graceful teardown of an existing connection.</li>
-<li>RST ACK can be used to immediately terminate an existing connection.</li>
-<li>Packets during the “conversation” portion of the connection (after the three-way handshake but before the teardown or termination) contain just an ACK by default.</li>
-<li>Optionally, they may also contain PSH and/or URG.</li>
-</ul>
-</li>
-<li><p>Abnormal TCP Flag combination</p>
-<ul>
-<li>SYN FIN is probably the best known illegal combination. Remember that SYN is used to start a connection, while FIN is used to end an existing connection. It is nonsensical to perform both actions at the same time. Many scanning tools use SYN FIN packets, because many intrusion detection systems did not catch these in the past, although most do so now. You can safely assume that any SYN FIN packets you see are malicious.</li>
-<li>SYN FIN PSH, SYN FIN RST, SYN FIN RST PSH, and other variants on SYN FIN also exist. These packets may be used by attackers who are aware that intrusion detection systems may be looking for packets with just the SYN and FIN bits set, not additional bits set. Again, these are clearly malicious.</li>
-<li>Packets should never contain just a FIN flag. FIN packets are frequently used for port scans, network mapping and other stealth activities.</li>
-<li>Some packets have absolutely no flags set at all; these are referred to as “null” packets. It is illegal to have a packet with no flags set.</li>
-</ul>
-</li>
-</ul>
-<p><a href="http://www.whitehats.ca/main/members/Seeker/seeker_tcp_header/seeker_tcp_header.html" target="_blank" rel="noopener">TCP Flags</a>  </p>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/TCP-FLAGS/" rel="tag"># TCP FLAGS</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/04/11/2017/sdrop_lua/" rel="next" title="Sdrop Wireshark Lua Plugin">
-                <i class="fa fa-chevron-left"></i> Sdrop Wireshark Lua Plugin
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/30/2017/关键对话/" rel="prev" title="关键对话练习表">
-                关键对话练习表 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
       
     </div>
+
   </div>
+  
+  
+  
+
+  
 
 
           </div>
@@ -443,15 +302,6 @@
 
 
           
-
-  
-    <div class="comments" id="comments">
-      <div id="uyan_frame"></div>
-    </div>
-
-  
-
-
 
         </div>
         
@@ -695,10 +545,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -724,10 +570,6 @@
   
     
 
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2154290"></script>
-      <!-- UY END -->
     
   
 

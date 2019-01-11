@@ -4,16 +4,14 @@
 
     
   <url>
-    <loc>http://www.ironjosh.top/2018/10/11/2018/debian-kdump/</loc>
-    <lastmod>2019-01-11T07:51:02.127Z</lastmod>
+    <loc>http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/</loc>
+    <lastmod>2019-01-11T08:15:44.575Z</lastmod>
     <data>
         <display>
-        <title>debian kdump使用</title>
-        <pubTime>2018-10-11T06:06:01.000Z</pubTime>
+        <title>Linux kernel hung task检测</title>
+        <pubTime>2018-12-24T06:06:01.000Z</pubTime>
         
-        <tag>KDump</tag>
-         
-        <tag>Debian</tag>
+        <tag>Kernel</tag>
          
          
            
@@ -26,16 +24,16 @@
 
     
   <url>
-    <loc>http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/</loc>
-    <lastmod>2019-01-11T07:47:01.718Z</lastmod>
+    <loc>http://www.ironjosh.top/2018/10/11/2018/debian-kdump/</loc>
+    <lastmod>2019-01-11T07:51:02.127Z</lastmod>
     <data>
         <display>
-        <title>使用ssh2-python登录设备</title>
-        <pubTime>2018-12-24T06:06:01.000Z</pubTime>
+        <title>debian kdump使用</title>
+        <pubTime>2018-10-11T06:06:01.000Z</pubTime>
         
-        <tag>Python</tag>
+        <tag>KDump</tag>
          
-        <tag>SSH</tag>
+        <tag>Debian</tag>
          
          
            

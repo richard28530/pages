@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Python,SSH," />
+  <meta name="keywords" content="Kernel," />
 
 
 
@@ -80,16 +80,16 @@
 
 
 <meta name="description" content="内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：  IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)； 内核自己出问题了。  这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常">
-<meta name="keywords" content="Python,SSH">
+<meta name="keywords" content="Kernel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用ssh2-python登录设备">
+<meta property="og:title" content="Linux kernel hung task检测">
 <meta property="og:url" content="http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/index.html">
 <meta property="og:site_name" content="陈虎的博客">
 <meta property="og:description" content="内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：  IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)； 内核自己出问题了。  这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-11T07:47:01.718Z">
+<meta property="og:updated_time" content="2019-01-11T08:15:44.575Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用ssh2-python登录设备">
+<meta name="twitter:title" content="Linux kernel hung task检测">
 <meta name="twitter:description" content="内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：  IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)； 内核自己出问题了。  这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常">
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>使用ssh2-python登录设备 | 陈虎的博客</title>
+  <title>Linux kernel hung task检测 | 陈虎的博客</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">使用ssh2-python登录设备</h2>
+          <h2 class="post-title" itemprop="name headline">Linux kernel hung task检测</h2>
         
 
         <div class="post-meta">
@@ -394,9 +394,7 @@ kernel.hung_task_panic = 0
       
         <div class="post-tags">
           
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-            <a href="/tags/SSH/" rel="tag"># SSH</a>
+            <a href="/tags/Kernel/" rel="tag"># Kernel</a>
           
         </div>
       
@@ -521,7 +519,7 @@ kernel.hung_task_panic = 0
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
