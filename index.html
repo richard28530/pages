@@ -229,16 +229,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -258,6 +248,335 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/24/2018/ssh2-python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ironjosh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈虎的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/24/2018/ssh2-python/" itemprop="url">使用ssh2-python登录设备</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T14:06:01+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          使用ssh2-python登录设备
+
+#!/usr/bin/python
+
+from __future__ import print_function
+from ssh2.session import Session
+from time import sleep
+
+import datetime
+import os
+import socket
+
+_devices = (
+        "192.168.1.212",
+        )
+
+for dev in _devices :
+    session = Session()
+    sock = socket.socket(socket
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/24/2018/ssh2-python/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/06/04/2018/python-paramiko-ssh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ironjosh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈虎的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/04/2018/python-paramiko-ssh/" itemprop="url">使用python paramiko ssh登录</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T15:59:01+08:00">
+                2018-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          使用python paramiko ssh登录
+
+#!/usr/bin/python
+
+import paramiko
+from time import sleep
+
+cnt = 1
+
+while True:
+
+    print "The ", cnt, " time reboot"
+
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect("10.97.25.44", 22, "admin", "admin", timeout=6
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/06/04/2018/python-paramiko-ssh/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -371,7 +690,7 @@
 1doxygen -g
 
 修改Doxyfile，添加如下
-12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 
+12345678910111213CLASS_DIAGRAMS       = YESCLASS_GRAPH          = YESCOLLABORATION_GRAPH  = YESDOT_GRAPH_MAX_NODES  = 100DOT_TRANSPARENT      = YESEXTRACT_ALL          = YESHAVE_DOT             = YESHIDE_UNDOC_RELATION
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -529,7 +848,7 @@
 
 html转pdf
 
-12wkhtmltopdf --dpi 300 --disable-smart-shrinking --print
+12wkhtmltopdf --dpi 300 --disable-smart-shrinking --print-media-type SONiC.html SONiC.pdfwkhtmltopdf --print-media-type --margin-top 10mm --margin-bottom 10m
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -679,7 +998,7 @@ html转pdf
           
           Essentials (3-step):(If much of your system is of a higher version, you’ll want to be careful downgrading. See especially format changes (data and personal config files)
 
-Remove all references to sid 
+Remove all references to sid or unstable in your /etc/apt/sources.list by deleting, replacing, or commenting out. Ensure sources.
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -829,7 +1148,7 @@ Remove all references to sid
           
           
 Dockfile如下
-1234567891011121314151617181920FROM debian:jessieRUN apt-get update &amp;&amp; apt-get -y install build-essential \    apt-transport-https \    ca-certificates \    curl \    gnupg2 \    l
+1234567891011121314151617181920FROM debian:jessieRUN apt-get update &amp;&amp; apt-get -y install build-essential \    apt-transport-https \    ca-certificates \    curl \    gnupg2 \    lsb-release \    software-properties-commonRUN curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -979,7 +1298,8 @@ Dockfile如下
           
           关键对话练习表
 对话原则对话技巧关键问题从“心”开始关注你的真正目的拒绝做出“傻瓜式选择”我让你感觉自己的目的是什么我的真正目的是什么 关于自己的
- 关于他人的 关于我们之间关系的怎样做才能实现这些真正目的我不希望怎样怎样才能真正的实现希望的目的，避免不希望实现的目的注意观察关注交谈何时会变成关键对话关注安全问题关注你的压力应对方式我正在陷入沉默或者暴力状态吗对方正在陷入沉默或暴力状态吗保证安全在
+ 关于他人的 关于我们之间关系的怎样做才能实现这些真正目的我不希望怎样怎样才能真正的实现希望的目的，避免不希望实现的目的注意观察关注交谈何时会变成关键对话关注安全问题关注你的压力应对方式我正在陷入沉默或者暴力状态吗对方正在陷入沉默或暴力状态吗保证安全在必要的时候道歉利用对比法消除误解利用四步法创建共同目的安全感为什么会出现危机我的真正目的是什么
+ 我是否建立了共同目标* 我是否保持了彼此尊重怎样做才能重建安全感控制想法行为模式回顾区分事实和想法留意
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1131,7 +1451,9 @@ Dockfile如下
 Normal TCP Flag combination
 
 SYN, SYN ACK, and ACK are used during the three-way handshake which establishes a TCP connection.
-Except for the initial SYN packet, every packet in a connection must hav
+Except for the initial SYN packet, every packet in a connection must have the ACK bit set.
+FIN ACK and ACK are used during the graceful teardown of an existing connection.
+
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1281,7 +1603,7 @@ Except for the initial SYN packet, every packet in a connection must hav
           
           
 exported packet payload format
-1234567891011121314151617&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;&lt;dropPacket&gt;    &lt;model version="1.0" author="ConnetOS"/&gt;    &lt;metaData&gt;      
+1234567891011121314151617&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;&lt;dropPacket&gt;    &lt;model version="1.0" author="ConnetOS"/&gt;    &lt;metaData&gt;        &lt;ingressPhysicalPort&gt;te-1/1/1&lt;/ingressPhysicalPort&gt;        &lt;egressPhysicalPort&gt;N
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1479,315 +1801,6 @@ exported packet payload format
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2012/04/01/2012/securecrt_script_vbs/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ironjosh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈虎的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/04/01/2012/securecrt_script_vbs/" itemprop="url">SecureCRT VBS script template</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-04-01T15:26:01+08:00">
-                2012-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          12345678910111213141516171819202122232425# $language = "VBScript"# $interface = "1.0"Sub Main  Dim result  Dim SendKey  SendKey = 03 'send ctrl+c key  result = 0  'crt.screen.clear  Do    crt.Screen.S
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2012/04/01/2012/securecrt_script_vbs/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2012/01/01/2012/hexo_markdown_syntax/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ironjosh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈虎的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2012/01/01/2012/hexo_markdown_syntax/" itemprop="url">Hexo Markdown语法</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2012-01-01T21:55:01+08:00">
-                2012-01-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-layout: title
-title: 中文测试
-date: 2017-12-25 21:54:01
-categories: 工具
-tags: [Markdown,PDF]
-comments: true
-
-
-
-可以通过下述代码强制展示预览
-
-1&lt;!--more--&gt;
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2012/01/01/2012/hexo_markdown_syntax/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1838,7 +1851,7 @@ comments: true
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1860,7 +1873,7 @@ comments: true
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1919,7 +1932,7 @@ comments: true
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
