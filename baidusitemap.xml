@@ -4,6 +4,92 @@
 
     
   <url>
+    <loc>http://www.ironjosh.top/2018/10/11/2018/debian-kdump/</loc>
+    <lastmod>2019-01-11T07:51:02.127Z</lastmod>
+    <data>
+        <display>
+        <title>debian kdump使用</title>
+        <pubTime>2018-10-11T06:06:01.000Z</pubTime>
+        
+        <tag>KDump</tag>
+         
+        <tag>Debian</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://www.ironjosh.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/</loc>
+    <lastmod>2019-01-11T07:47:01.718Z</lastmod>
+    <data>
+        <display>
+        <title>使用ssh2-python登录设备</title>
+        <pubTime>2018-12-24T06:06:01.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>SSH</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://www.ironjosh.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ironjosh.top/2018/12/24/2018/ssh2-python/</loc>
+    <lastmod>2019-01-11T07:43:34.632Z</lastmod>
+    <data>
+        <display>
+        <title>使用ssh2-python登录设备</title>
+        <pubTime>2018-12-24T06:06:01.000Z</pubTime>
+        
+        <tag>Python</tag>
+         
+        <tag>SSH</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://www.ironjosh.top/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.ironjosh.top/2018/12/04/2018/intel-ME/</loc>
+    <lastmod>2019-01-11T07:39:19.088Z</lastmod>
+    <data>
+        <display>
+        <title>intel ME</title>
+        <pubTime>2018-12-04T06:06:01.000Z</pubTime>
+        
+        <tag>Intel</tag>
+         
+         
+           
+             
+              <breadCrumb title="Background" url="http://www.ironjosh.top/categories/Background/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ironjosh.top/2017/10/13/2017/Latex%E5%88%B7%E6%96%B0%E5%AE%8F%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
     <lastmod>2019-01-11T07:16:44.550Z</lastmod>
     <data>
@@ -30,28 +116,6 @@
         <display>
         <title>使用python paramiko ssh登录</title>
         <pubTime>2018-06-04T07:59:01.000Z</pubTime>
-        
-        <tag>Python</tag>
-         
-        <tag>SSH</tag>
-         
-         
-           
-             
-              <breadCrumb title="工具" url="http://www.ironjosh.top/categories/%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ironjosh.top/2018/12/24/2018/ssh2-python/</loc>
-    <lastmod>2019-01-11T07:08:29.943Z</lastmod>
-    <data>
-        <display>
-        <title>使用ssh2-python登录设备</title>
-        <pubTime>2018-12-24T06:06:01.000Z</pubTime>
         
         <tag>Python</tag>
          
