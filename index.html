@@ -262,6 +262,159 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ironjosh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈虎的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/24/2018/kernel-hung-task-check/" itemprop="url">Linux kernel hung task检测</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T14:06:01+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：
+
+IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)；
+内核自己出问题了。
+
+这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常只能重启恢复了。内核针对这种开发了一种hung task的检测机制，基本原理是：定时检测系统中处于D状态的进程，如果其处于D状态的时间超过了指定时间(默认120s，可以配置)，则打印相关堆栈信息，也可
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/24/2018/kernel-hung-task-check/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/24/2018/ssh2-python/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -428,7 +581,7 @@ for dev in _devices :
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/">
+    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/04/2018/intel-microarchitecture/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ironjosh">
@@ -447,7 +600,7 @@ for dev in _devices :
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/24/2018/kernel-hung-task-check/" itemprop="url">Linux kernel hung task检测</a></h2>
+                <a class="post-title-link" href="/2018/12/04/2018/intel-microarchitecture/" itemprop="url">intel cpu microarchitecture</a></h2>
         
 
         <div class="post-meta">
@@ -459,8 +612,8 @@ for dev in _devices :
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T14:06:01+08:00">
-                2018-12-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-04T14:06:01+08:00">
+                2018-12-04
               </time>
             
 
@@ -482,8 +635,8 @@ for dev in _devices :
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/Background/" itemprop="url" rel="index">
+                    <span itemprop="name">Background</span>
                   </a>
                 </span>
 
@@ -521,16 +674,12 @@ for dev in _devices :
       
         
           
-          内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：
+          
 
-IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)；
-内核自己出问题了。
-
-这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常只能重启恢复了。内核针对这种开发了一种hung task的检测机制，基本原理是：定时检测系统中处于D状态的进程，如果其处于D状态的时间超过了指定时间(默认120s，可以配置)，则打印相关堆栈信息，也可
-          ...
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/12/24/2018/kernel-hung-task-check/#more" rel="contents">
+            <a class="btn" href="/2018/12/04/2018/intel-microarchitecture/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -679,155 +828,6 @@ IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导�
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/04/2018/intel-ME/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2018/12/04/2018/intel-microarchitecture/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ironjosh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="陈虎的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/12/04/2018/intel-microarchitecture/" itemprop="url">intel cpu microarchitecture</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-04T14:06:01+08:00">
-                2018-12-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Background/" itemprop="url" rel="index">
-                    <span itemprop="name">Background</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/12/04/2018/intel-microarchitecture/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
