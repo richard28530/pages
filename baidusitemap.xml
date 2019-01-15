@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.ironjosh.top/2018/12/04/2018/intel-microarchitecture/</loc>
+    <lastmod>2019-01-15T07:37:26.305Z</lastmod>
+    <data>
+        <display>
+        <title>intel cpu microarchitecture</title>
+        <pubTime>2018-12-04T06:06:01.000Z</pubTime>
+        
+        <tag>Intel</tag>
+         
+         
+           
+             
+              <breadCrumb title="Background" url="http://www.ironjosh.top/categories/Background/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ironjosh.top/2018/12/24/2018/kernel-hung-task-check/</loc>
     <lastmod>2019-01-11T08:15:44.575Z</lastmod>
     <data>
@@ -31,9 +51,9 @@
         <title>debian kdump使用</title>
         <pubTime>2018-10-11T06:06:01.000Z</pubTime>
         
-        <tag>KDump</tag>
-         
         <tag>Debian</tag>
+         
+        <tag>KDump</tag>
          
          
            
