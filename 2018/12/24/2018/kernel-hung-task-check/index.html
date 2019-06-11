@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈虎的博客">
 <meta property="og:description" content="内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：  IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)； 内核自己出问题了。  这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-11T08:15:44.575Z">
+<meta property="og:updated_time" content="2019-03-21T06:45:10.454Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux kernel hung task检测">
 <meta name="twitter:description" content="内核hung task检测机制由来我们知道进程等待IO时，经常处于D状态，即TASK_UNINTERRUPTIBLE状态，处于这种状态的进程不处理信号，所以kill不掉，如果进程长期处于D状态，那么肯定不正常，原因可能有二：  IO路径上的硬件出问题了，比如硬盘坏了(只有少数情况会导致长期D，通常会返回错误)； 内核自己出问题了。  这种问题不好定位，而且一旦出现就通常不可恢复，kill不掉，通常">
@@ -407,8 +407,8 @@ kernel.hung_task_panic = 0
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/2018/ssh2-python/" rel="next" title="使用ssh2-python登录设备">
-                <i class="fa fa-chevron-left"></i> 使用ssh2-python登录设备
+              <a href="/2018/12/24/2018/cstate-pstate/" rel="next" title="CPU s-state c-state p-state">
+                <i class="fa fa-chevron-left"></i> CPU s-state c-state p-state
               </a>
             
           </div>
@@ -416,6 +416,10 @@ kernel.hung_task_panic = 0
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/24/2018/ssh2-python/" rel="prev" title="使用ssh2-python登录设备">
+                使用ssh2-python登录设备 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -497,7 +501,7 @@ kernel.hung_task_panic = 0
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -508,7 +512,7 @@ kernel.hung_task_panic = 0
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -519,7 +523,7 @@ kernel.hung_task_panic = 0
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
