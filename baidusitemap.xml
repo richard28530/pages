@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.ironjosh.top/2019/06/07/2019/loop-device/</loc>
+    <lastmod>2019-06-11T14:55:10.005Z</lastmod>
+    <data>
+        <display>
+        <title>Linux Loop device</title>
+        <pubTime>2019-06-07T06:06:01.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>Device</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://www.ironjosh.top/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.ironjosh.top/2018/09/30/2018/centos_lldp/</loc>
     <lastmod>2019-06-11T14:51:29.103Z</lastmod>
     <data>
@@ -119,9 +141,9 @@
         <title>Intel cstate可能导致性能下降</title>
         <pubTime>2018-07-24T06:06:01.000Z</pubTime>
         
-        <tag>Performance</tag>
-         
         <tag>Intel</tag>
+         
+        <tag>Performance</tag>
          
         <tag>CState</tag>
          
@@ -191,28 +213,6 @@
            
              
               <breadCrumb title="Investment" url="http://www.ironjosh.top/categories/Investment/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.ironjosh.top/2018/10/11/2019/loop-device/</loc>
-    <lastmod>2019-06-11T13:56:50.778Z</lastmod>
-    <data>
-        <display>
-        <title>Linux Loop device</title>
-        <pubTime>2018-10-11T06:06:01.000Z</pubTime>
-        
-        <tag>Linux</tag>
-         
-        <tag>Device</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux" url="http://www.ironjosh.top/categories/Linux/"/>
           
         </display>
     </data>
