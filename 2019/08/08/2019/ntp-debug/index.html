@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Linux,NTP," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="NTP debughttp://doc.ntp.org/3-5.93e/debug.html ntpq是一个可以在ntp client和ntp server都可以使用的debug工具，它实现了RFC 1305 Appendix A中的一些管理的接口。 debug主要使用以下命令pe ，显示所有的ntp peer，其中可以看到peer的状态as ，显示对应peer的associate idrv xx">
+<meta name="keywords" content="Linux,NTP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NTP debug">
+<meta property="og:url" content="http://www.ironjosh.top/2019/08/08/2019/ntp-debug/index.html">
+<meta property="og:site_name" content="陈虎的博客">
+<meta property="og:description" content="NTP debughttp://doc.ntp.org/3-5.93e/debug.html ntpq是一个可以在ntp client和ntp server都可以使用的debug工具，它实现了RFC 1305 Appendix A中的一些管理的接口。 debug主要使用以下命令pe ，显示所有的ntp peer，其中可以看到peer的状态as ，显示对应peer的associate idrv xx">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-24T14:48:00.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="NTP debug">
+<meta name="twitter:description" content="NTP debughttp://doc.ntp.org/3-5.93e/debug.html ntpq是一个可以在ntp client和ntp server都可以使用的debug工具，它实现了RFC 1305 Appendix A中的一些管理的接口。 debug主要使用以下命令pe ，显示所有的ntp peer，其中可以看到peer的状态as ，显示对应peer的associate idrv xx">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.ironjosh.top/2019/08/08/2019/ntp-debug/"/>
+
+
+
+
+
+  <title>NTP debug | 陈虎的博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陈虎的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.ironjosh.top/2019/08/08/2019/ntp-debug/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ironjosh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈虎的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">NTP debug</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-08T14:06:01+08:00">
+                2019-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="NTP-debug"><a href="#NTP-debug" class="headerlink" title="NTP debug"></a>NTP debug</h1><p><a href="http://doc.ntp.org/3-5.93e/debug.html" target="_blank" rel="noopener">http://doc.ntp.org/3-5.93e/debug.html</a></p>
+<p>ntpq是一个可以在ntp client和ntp server都可以使用的debug工具，它实现了RFC 1305 Appendix A中的一些管理的接口。</p>
+<p>debug主要使用以下命令<br>pe ，显示所有的ntp peer，其中可以看到peer的状态<br>as ，显示对应peer的associate id<br>rv xxx，通过rv associcate_id可以看到对应peer的请求参数及状态</p>
+<p>以下为一个正常的能获取时间的ntp client的操作。</p>
+<pre>
+ntpq> pe
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*10.10.10.10     10.4.20.11       3 u   54   64    7    0.129   -0.702   0.593
++10.10.10.20     10.4.20.11       3 u   45   64   17    0.130   -0.909   0.448
+ntpq> as
+
+ind assid status  conf reach auth condition  last_event cnt
+===========================================================
+  1 64017  965a   yes   yes  none  sys.peer    sys_peer  5
+  2 64018  9414   yes   yes  none candidate   reachable  1
+ntpq> rv 64017
+associd=64017 status=965a conf, reach, sel_sys.peer, 5 events, sys_peer,
+srcadr=10.10.10.10, srcport=123, dstadr=10.131.5.224, dstport=123,
+leap=00, stratum=3, precision=-23, rootdelay=126.099, rootdisp=156.372,
+refid=10.4.20.11,
+reftime=e0f74c70.dc347907  Fri, Aug  9 2019  9:35:44.860,
+rec=e0f74db2.e03e3875  Fri, Aug  9 2019  9:41:06.875, reach=007,
+unreach=0, hmode=3, pmode=4, hpoll=6, ppoll=6, headway=445, flash=00 ok,
+keyid=0, offset=-0.702, delay=0.129, dispersion=0.872, jitter=0.593,
+xleave=0.094,
+filtdelay=     0.13    0.09    0.08    0.09    0.08    0.09    0.10    0.11,
+filtoffset=   -0.70   -0.52   -0.32   -0.12   -0.01   -0.01    0.00    0.00,
+filtdisp=      0.00    0.99    1.95    2.88    3.41    3.44    3.47    3.50
+ntpq>
+</pre>
+
+<p>下面是一个不能正常获取时间的ntp client，原因是ntp的listen ip配置的有问题，导致rv里面显示的dstadr为0.0.0.0</p>
+<pre>
+ntpq> pe
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+ 10.10.10.10     .INIT.          16 -    - 1024    0    0.000    0.000   0.000
+ 10.10.10.20     .INIT.          16 -    - 1024    0    0.000    0.000   0.000
+ntpq>
+ntpq>
+ntpq> as
+
+ind assid status  conf reach auth condition  last_event cnt
+===========================================================
+  1 54885  8011   yes    no  none    reject    mobilize  1
+  2 54886  8011   yes    no  none    reject    mobilize  1
+ntpq> rv 54885
+associd=54885 status=8011 conf, sel_reject, 1 event, mobilize,
+srcadr=10.10.10.10, srcport=123, dstadr=0.0.0.0, dstport=0, leap=11,
+stratum=16, precision=-23, rootdelay=0.000, rootdisp=0.000, refid=INIT,
+reftime=00000000.00000000  Mon, Jan  1 1900  8:05:43.000,
+rec=00000000.00000000  Mon, Jan  1 1900  8:05:43.000, reach=000,
+unreach=195, hmode=3, pmode=0, hpoll=10, ppoll=10, headway=0,
+flash=1600 peer_stratum, peer_dist, peer_unreach, keyid=0, offset=0.000,
+delay=0.000, dispersion=15937.500, jitter=0.000,
+filtdelay=     0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00,
+filtoffset=    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00,
+filtdisp=   16000.0 16000.0 16000.0 16000.0 16000.0 16000.0 16000.0 16000.0
+ntpq>
+</pre>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/NTP/" rel="tag"># NTP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/24/2019/trade-2019-07-24/" rel="next" title="Wed Jul 24 2019 00:00:00 GMT+0800 (Hong Kong Standard Time)">
+                <i class="fa fa-chevron-left"></i> Wed Jul 24 2019 00:00:00 GMT+0800 (Hong Kong Standard Time)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/23/2019/trade-2019-08-23/" rel="prev" title="Fri Aug 23 2019 00:00:00 GMT+0800 (Hong Kong Standard Time)">
+                Fri Aug 23 2019 00:00:00 GMT+0800 (Hong Kong Standard Time) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="uyan_frame"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">ironjosh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/richard28530" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:ironjosh@163.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/richard28530" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NTP-debug"><span class="nav-number">1.</span> <span class="nav-text">NTP debug</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ironjosh</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+    
+
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2154290"></script>
+      <!-- UY END -->
+    
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
